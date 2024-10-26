@@ -32,3 +32,22 @@ $ make config-upload
 ```sh
 $ make deploy
 ```
+
+## Run Locally
+To run the bot locally, first:
+1. After you creating .env file Prepare your developing environment by (if you didn't run this command ever):
+```sh
+$ make prepare
+```
+2. you need to write a local configuration file by using:
+```sh
+$ make dev-config name=YourConfigurationfile.toml
+ ```
+3.  all things ready 
+```sh
+$ make dev
+```
+4. install cloudflared [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/) and run command to visible on the web (usefull for telegram webhook)
+```sh
+$ cloudflared tunnel --url http://localhost:8780
+```
